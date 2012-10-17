@@ -1,1 +1,1 @@
-Sort search results by longtitude and latitude.
+Sort resorts by the nearest location (longitude and latitude)
