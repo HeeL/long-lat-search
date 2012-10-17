@@ -1,0 +1,18 @@
+<div class="resorts-link">
+  <a href="<%=resorts_path%>">Manage Resorts</a>
+</div>
+  
+<%=form_tag('/') do%>
+  <%=label_tag :latitude%>: <%=text_field_tag :latitude, params[:latitude]%> <br />
+  <%=label_tag :longitude%>: <%=text_field_tag :longitude, params[:longitude]%> <br />
+  <%=submit_tag 'Sort by nearest'%>
+<%end%>
+
+<hr />
+<div id="resorts">
+  <%@resorts.each do |resort| %>
+    <div class="resort">
+      <h1><%=resort[:name]%> [<%=resort[:latitude]%>, <%=resort[:longitude]%>]</h1>
+    </div>
+  <%end%>
+</div>

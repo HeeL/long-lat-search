@@ -1,4 +1,8 @@
 LonglLatSearch::Application.routes.draw do
+  resources :resorts
+
+  get "search/index"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
